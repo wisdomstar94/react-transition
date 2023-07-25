@@ -1,0 +1,28 @@
+.enter {
+  animation-name: enter-animation;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+.exit {
+  animation-name: exit-animation;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+}
+
+@keyframes enter-animation {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 50px;
+  }
+}
+
+@keyframes exit-animation {
+  0% {
+    max-height: 50px;
+  }
+  100% {
+    max-height: 0;
+  }
+}

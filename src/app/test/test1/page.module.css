@@ -1,0 +1,39 @@
+.enter {
+  overflow: hidden;
+  animation-name: enter;
+  animation-duration: 400ms;
+  animation-fill-mode: both;
+}
+
+.exit {
+  overflow: hidden;
+  animation-name: exit;
+  animation-duration: 400ms;
+  animation-fill-mode: both;
+}
+
+@keyframes enter {
+  0% {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    max-height: 100px;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes exit {
+  0% {
+    max-height: 100px;
+    opacity: 1;
+    /* transform: translateY(0); */
+  }
+  100% {
+    max-height: 0;
+    opacity: 0;
+    /* transform: translateY(-20px); */
+  }
+}
