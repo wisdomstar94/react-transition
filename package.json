@@ -1,34 +1,18 @@
 {
   "name": "@wisdomstar94/react-transition",
-  "version": "0.0.1",
+  "version": "0.0.2-test.1",
+  "license": "MIT",
   "private": false,
   "scripts": {
     "dev": "next dev -p 3330",
-    "build": "node ./build.esbuild.js",
-    "build:tsc": "tsc --project ./tsconfig.package.json",
-    "next-build": "next build",
-    "next-start": "next start",
-    "lint": "next lint"
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "pack:build": "node ./build.esbuild.js",
+    "pack:build:tsc": "tsc --project ./tsconfig.package.json"
   },
   "main": "index.ts",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "repository": "https://github.com/wisdomstar94/react-transition",
-  "dependencies": {
-    "@types/node": "20.4.4",
-    "@types/react": "18.2.16",
-    "@types/react-dom": "18.2.7",
-    "autoprefixer": "10.4.14",
-    "eslint": "8.45.0",
-    "eslint-config-next": "13.4.12",
-    "next": "13.4.12",
-    "postcss": "8.4.27",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwindcss": "3.3.3",
-    "typescript": "5.1.6"
-  },
   "peerDependencies": {
     "@types/react": "^18.2.16",
     "@types/react-dom": "^18.2.7",
@@ -36,7 +20,19 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "esbuild": "^0.18.16",
+    "@types/node": "20.4.4",
+    "@types/react": "^18.2.16",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.12",
+    "next": "13.4.12",
+    "postcss": "8.4.27",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6",
+    "esbuild": "^0.18.20",
     "esbuild-css-modules-plugin": "^2.7.1"
   }
 }
