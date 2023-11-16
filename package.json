@@ -1,6 +1,6 @@
 {
   "name": "@wisdomstar94/react-transition",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "license": "MIT",
   "private": false,
   "scripts": {
@@ -24,6 +24,8 @@
     "@types/react": "^18.2.16",
     "@types/react-dom": "^18.2.7",
     "autoprefixer": "10.4.14",
+    "esbuild": "^0.18.20",
+    "esbuild-css-modules-plugin": "^2.7.1",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
     "next": "13.4.12",
@@ -31,8 +33,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwindcss": "3.3.3",
-    "typescript": "5.1.6",
-    "esbuild": "^0.18.20",
-    "esbuild-css-modules-plugin": "^2.7.1"
+    "typescript": "5.1.6"
   }
 }

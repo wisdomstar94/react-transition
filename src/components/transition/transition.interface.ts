@@ -1,31 +1,36 @@
+import { JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal } from "react";
+
 export declare namespace ITransition {
+  export type Child = ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode;
+  export type TransactionType = 'insert' | 'delete';
+
   export interface ClassNames {
-    enterActive?: string;
+    enterStartBefore?: string;
     enter: string;
-    enterDone?: string;
+    enterEndAfter?: string;
 
-    exitActive?: string;
-    exit: string;
-    exitDone?: string;
+    leaveStartBefore?: string;
+    leave: string;
+    leaveEndAfter?: string;
   }
 
-  export interface Timeout {
+  export interface Timeouts {
     enter: number;
-    exit: number;
+    leave: number;
   }
 
-  export interface ComponentProps {
+  export interface TransactioningChildInfo {
+    type: TransactionType;
+    isTransactioning: boolean;
+    isTransactionComplete: boolean;
+    timeouter: NodeJS.Timeout;
+  }
+
+  export interface Props {
     className?: string;
-    children: React.ReactNode;
-    classNames?: ClassNames;
-    timeout?: Timeout;
-    /**
-     * 첫 렌더링시에는 트랜지션을 적용하지 않을 것인지에 대한 값입니다.
-     */
-    isDisableTransitionWhenFirstRender?: boolean;
-    /**
-     * 항상 트랜지션을 적용하지 않을 것인지에 대한 값입니다.
-     */
-    isDisableTransition?: boolean;
+    classNames: ClassNames;
+    childWrapperClassName?: string;
+    timeouts: Timeouts;
+    children: ReactNode;
   }
 }

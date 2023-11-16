@@ -16,13 +16,13 @@ export default function Page() {
       <div className="w-full relative block">
         <Transition
           className="w-full relative flex flex-wrap items-start content-start"
-          timeout={{
+          timeouts={{
             enter: 400,
-            exit: 400,
+            leave: 400,
           }}
           classNames={{
             enter: styles['enter'],
-            exit: styles['exit'],
+            leave: styles['exit'],
           }}>
           {
             items?.map(item => {
