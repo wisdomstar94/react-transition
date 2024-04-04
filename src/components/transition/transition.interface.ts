@@ -1,7 +1,7 @@
-import { JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal } from "react";
+import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal } from "react";
 
 export declare namespace ITransition {
-  export type Child = ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode;
+  export type Child = ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal;
   export type TransactionType = 'insert' | 'delete';
 
   export interface ClassNames {
