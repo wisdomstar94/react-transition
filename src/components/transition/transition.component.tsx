@@ -1,4 +1,4 @@
-import { Children, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { Children, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { ITransition } from "./transition.interface";
 
 function getKey(key: string) {
@@ -92,10 +92,14 @@ export function Transition(props: ITransition.Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [children]);
 
-  useLayoutEffect(() => {
-    takingChildren.current = [...renderedChildren];
-  }, [renderedChildren]);
+  useEffect(() => {
+    return () => {
+      setRenderedChildren(prev => []);
+    };
+  }, []);
 
+  takingChildren.current = [...renderedChildren];
+  
   return (
     <>
       <div className={className}>

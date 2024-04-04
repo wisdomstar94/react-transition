@@ -14,6 +14,7 @@ esbuild.build({
   tsconfig: "./tsconfig.package.json",
   treeShaking: true,
   external: ['react-dom', 'react'],
+  metafile: true,
   plugins: [
     cssModulesPlugin({
       inject: true,

@@ -7,6 +7,7 @@ export default function RootLayoutClient() {
   const [menus, setMenus] = useState([
     { name: '/test/test1', href: '/test/test1' },
     { name: '/test/test2', href: '/test/test2' },
+    { name: '/test/test3', href: '/test/test3' },
   ]);
 
   return (

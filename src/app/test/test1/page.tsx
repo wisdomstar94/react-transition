@@ -16,6 +16,7 @@ export default function Page() {
       <div className="w-full relative block">
         <Transition
           className="w-full relative flex flex-wrap items-start content-start"
+          childWrapperClassName="w-full"
           timeouts={{
             enter: 400,
             leave: 400,
